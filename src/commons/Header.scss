@@ -1,0 +1,24 @@
+.navbar {
+  background: Black;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  align-self: center;
+  list-style-type: none;
+  display: flex;
+  gap: 200px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  transition: all 0.3s linear;
+  &:hover {
+    color: green;
+  }
+}
