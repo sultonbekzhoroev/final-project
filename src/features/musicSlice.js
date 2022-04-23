@@ -10,11 +10,12 @@ const options = {
 
 export const callToAPI = createAsyncThunk(
   "api/music",
+
   async (obj, { state, error }) => {
     try {
       const response = await fetch("https://animes3.p.rapidapi.com/", options);
       const request = await response.json();
-
+      console.log(request);
       return request;
     } catch (error) {
       console.log(error);

@@ -5,20 +5,31 @@ import { callToAPI } from "../features/musicSlice";
 import DataItem from "./DataItem";
 import "../App.css";
 import { Spinner } from "reactstrap";
+
 function Home() {
   const dispatch = useDispatch();
   const data = useSelector((state) => state);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   console.log(data);
   useEffect(() => {
     dispatch(callToAPI());
-    setLoading(false);
-  }, [dispatch]);
+    setLoading(true);
+  }, [dispatch, loading]);
 
   return (
     <div className="App">
       {loading ? (
+        <Grid container spacing={2} margin="auto" width="90%">
+          {data.music.map((el, index) => {
+            return (
+              <Grid item sx={6} md={3} key={index} margin={0}>
+                <DataItem el={el} />
+              </Grid>
+            );
+          })}
+        </Grid>
+      ) : (
         <div>
           <Spinner color="primary" type="grow">
             Loading...
@@ -45,16 +56,6 @@ function Home() {
             Loading...
           </Spinner>
         </div>
-      ) : (
-        <Grid container spacing={2} margin={0}>
-          {data.music.map((el, index) => {
-            return (
-              <Grid item sx={6} md={3} key={index} margin={0}>
-                <DataItem el={el} />
-              </Grid>
-            );
-          })}
-        </Grid>
       )}
     </div>
   );
