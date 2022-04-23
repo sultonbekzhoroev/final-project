@@ -1,5 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 .navbar {
-  background: Black;
+  background: black;
   padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;

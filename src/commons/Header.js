@@ -1,4 +1,4 @@
-import logo from "../images/anime.jpg";
+import logo from "../images/logo.jpg";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 function Header() {
