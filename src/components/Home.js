@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { callToAPI } from "../features/musicSlice";
 import DataItem from "./DataItem";
@@ -19,7 +19,7 @@ function Home({ text }) {
       <Grid container spacing={2} margin="auto" width="90%">
         {data.music.map((el, index) => {
           return (
-            <Grid item sx={6} md={3} key={index} margin={0}>
+            <Grid item sx={12} md={3} key={index} margin={0}>
               <DataItem el={el} />
             </Grid>
           );

@@ -3,11 +3,17 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  position: relative;
+}
+
 .navbar {
   background: black;
   padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
+  position: fixed;
 }
 
 nav {
@@ -36,4 +42,24 @@ nav {
   margin-top: 20px;
   border: 1px solid black;
   background-color: lightgreen;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: block;
+    height: 150px;
+  }
+  nav {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar {
+    display: inline-block;
+    height: 150px;
+  }
+  nav {
+    display: inline-block;
+  }
 }

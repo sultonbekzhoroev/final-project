@@ -2,3 +2,9 @@
   text-align: center;
   margin: 0;
 }
+
+@media screen and (max-width: 768px) {
+  .App Grid {
+    width: 90%;
+  }
+}
