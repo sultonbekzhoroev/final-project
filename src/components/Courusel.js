@@ -10,13 +10,13 @@ import {
 
 const items = [
   {
-    src: "https://media.moddb.com/images/groups/1/1/84/anime_wallpaper_v1_by_jontewftnd4ye097.jpg",
+    src: "https://i.playground.ru/p/6xPD5RAYUKa__1prq359ZQ.jpeg",
   },
   {
-    src: "https://cdn.ananasposter.ru/image/cache/catalog/poster/anime/81/17036-1000x830.jpg",
+    src: "https://www.culture.ru/storage/images/c80636e2-6690-5e09-b8b0-4b0976c77065",
   },
   {
-    src: "https://i.pinimg.com/originals/c6/33/ae/c633ae058ddaa59f43649caac1748cf4.png",
+    src: "https://images2.alphacoders.com/618/thumb-1920-618504.jpg",
   },
 ];
 

@@ -29,12 +29,19 @@ function DataItem({ el }) {
     setOpen(false);
   };
   return (
-    <Card sx={{ maxWidth: 300, marginTop: "20px" }}>
+    <Card
+      sx={{
+        maxWidth: 300,
+        marginTop: "20px",
+        backgroundColor: "black",
+        color: "#fff",
+      }}
+    >
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image={el.img}
+          image={el.image_url}
           alt="green iguana"
         />
         <CardContent>
@@ -44,10 +51,10 @@ function DataItem({ el }) {
             component="div"
             style={{ overflow: "hidden" }}
           >
-            {el.title.slice(1, 20)}
+            {el.name.slice(1, 21)}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {el.name}
+            {el.year}
           </Typography>
         </CardContent>
         <div>
@@ -68,9 +75,9 @@ function DataItem({ el }) {
                 {el.name}
               </Typography>
               <Typography id="keep-mounted-modal-description" sx={{ mt: 2 }}>
-                {el.title}
+                {el.relevance}
               </Typography>
-              <img src={el.img} height="300" />
+              <img src={el.image_url} height="300" />
             </Box>
           </Modal>
         </div>
