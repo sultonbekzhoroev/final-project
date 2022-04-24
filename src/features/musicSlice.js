@@ -11,10 +11,10 @@ const options = {
 export const callToAPI = createAsyncThunk(
   "api/music",
 
-  async () => {
+  async (text) => {
     try {
       const response = await fetch(
-        "https://watchmode.p.rapidapi.com/autocomplete-search/?search_value=iron&search_type=1",
+        `https://watchmode.p.rapidapi.com/autocomplete-search/?search_value=+${text}`,
         options
       );
       const request = await response.json();

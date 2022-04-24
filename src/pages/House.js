@@ -7,7 +7,7 @@ import TextField from "@mui/material/TextField";
 import { Spinner } from "reactstrap";
 const House = () => {
   const [loading, setLoading] = useState(false);
-
+  const [text, setText] = useState("");
   setTimeout(() => {
     setLoading(true);
   }, 5000);
@@ -26,9 +26,15 @@ const House = () => {
               backgroundColor: "#fff",
             }}
           >
-            <TextField fullWidth label="Search..." id="fullWidth" />
+            <TextField
+              fullWidth
+              label="Search..."
+              id="fullWidth"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            />
           </Box>
-          <Home />
+          <Home text={text} />
         </div>
       ) : (
         <div>

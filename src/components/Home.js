@@ -5,14 +5,14 @@ import { callToAPI } from "../features/musicSlice";
 import DataItem from "./DataItem";
 import "../App.css";
 
-function Home() {
+function Home({ text }) {
   const dispatch = useDispatch();
   const data = useSelector((state) => state);
 
   console.log(data);
   useEffect(() => {
-    dispatch(callToAPI());
-  }, [dispatch]);
+    dispatch(callToAPI(text));
+  }, [text]);
 
   return (
     <div className="App">
