@@ -41,7 +41,11 @@ function DataItem({ el }) {
         <CardMedia
           component="img"
           height="140"
-          image={el.image_url}
+          image={
+            el.image_url === "https://cdn.watchmode.com/profiles/"
+              ? "https://images.pathe-thuis.nl/29515_1920x1080.jpg"
+              : el.image_url
+          }
           alt="green iguana"
         />
         <CardContent>

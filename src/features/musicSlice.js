@@ -18,7 +18,7 @@ export const callToAPI = createAsyncThunk(
         options
       );
       const request = await response.json();
-      console.log(request);
+
       return request.results;
     } catch (error) {
       console.log(error);

@@ -72,7 +72,13 @@ class Courusel extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <img src={item.src} alt={item.altText} height="400" width="90%" />
+          <img
+            src={item.src}
+            alt={item.altText}
+            height="550"
+            width="80%"
+            maxWidth="100px"
+          />
           <CarouselCaption
             captionText={item.caption}
             captionHeader={item.caption}

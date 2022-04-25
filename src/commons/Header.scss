@@ -11,6 +11,8 @@ body {
 .navbar {
   background: black;
   padding: 0.5rem 1rem;
+  margin: auto;
+  max-width: 1700px;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -24,7 +26,7 @@ nav {
 }
 
 .nav-link {
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
   text-transform: capitalize;
   font-size: 1.2rem;

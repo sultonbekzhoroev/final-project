@@ -12,7 +12,7 @@ const House = () => {
     setLoading(true);
   }, 5000);
   return (
-    <div style={{ backgroundColor: "#36688D" }}>
+    <div style={{ backgroundColor: "#36688D", paddingBottom: "30px" }}>
       <Header />
       {loading ? (
         <div>
